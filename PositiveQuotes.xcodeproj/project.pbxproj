@@ -15,6 +15,9 @@
 		E54FF16D1D73A6A100147D64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54FF16B1D73A6A100147D64 /* LaunchScreen.storyboard */; };
 		E54FF1781D73A6A100147D64 /* PositiveQuotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E54FF1771D73A6A100147D64 /* PositiveQuotesTests.m */; };
 		E54FF1831D73A6A100147D64 /* PositiveQuotesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E54FF1821D73A6A100147D64 /* PositiveQuotesUITests.m */; };
+		E54FF1931D73B0FE00147D64 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54FF1921D73B0FE00147D64 /* AVFoundation.framework */; };
+		E54FF1951D73B1AA00147D64 /* Marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E54FF1941D73B1AA00147D64 /* Marimba.mp3 */; };
+		E54FF1971D73B37600147D64 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E54FF1961D73B37600147D64 /* background.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		E54FF17E1D73A6A100147D64 /* PositiveQuotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositiveQuotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54FF1821D73A6A100147D64 /* PositiveQuotesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositiveQuotesUITests.m; sourceTree = "<group>"; };
 		E54FF1841D73A6A100147D64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54FF1921D73B0FE00147D64 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E54FF1941D73B1AA00147D64 /* Marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marimba.mp3; sourceTree = "<group>"; };
+		E54FF1961D73B37600147D64 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54FF1931D73B0FE00147D64 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +108,8 @@
 		E54FF15C1D73A6A100147D64 /* PositiveQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				E54FF1961D73B37600147D64 /* background.jpeg */,
+				E54FF1941D73B1AA00147D64 /* Marimba.mp3 */,
 				E54FF1601D73A6A100147D64 /* AppDelegate.h */,
 				E54FF1611D73A6A100147D64 /* AppDelegate.m */,
 				E54FF1631D73A6A100147D64 /* ViewController.h */,
@@ -117,6 +126,7 @@
 		E54FF15D1D73A6A100147D64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E54FF1921D73B0FE00147D64 /* AVFoundation.framework */,
 				E54FF15E1D73A6A100147D64 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -246,6 +256,8 @@
 				E54FF16D1D73A6A100147D64 /* LaunchScreen.storyboard in Resources */,
 				E54FF16A1D73A6A100147D64 /* Assets.xcassets in Resources */,
 				E54FF1681D73A6A100147D64 /* Main.storyboard in Resources */,
+				E54FF1951D73B1AA00147D64 /* Marimba.mp3 in Resources */,
+				E54FF1971D73B37600147D64 /* background.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

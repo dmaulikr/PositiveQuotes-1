@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="weW-mo-gQI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-Ez-xbx">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="wME-Qo-aWd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.51082567729999995" green="0.70438492149999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wME-Qo-aWd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="wME-Qo-aWd"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ8-No-t7I">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xs-Jp-L6t"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="weW-mo-gQI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="10H-Iy-ivI"/>
+                            <constraint firstItem="weW-mo-gQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Wz-kN-g9h"/>
+                            <constraint firstItem="fQg-Ez-xbx" firstAttribute="leading" secondItem="weW-mo-gQI" secondAttribute="leading" id="8II-tu-KH9"/>
+                            <constraint firstItem="weW-mo-gQI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ehu-Yz-aCg"/>
+                            <constraint firstAttribute="trailing" secondItem="weW-mo-gQI" secondAttribute="trailing" id="PYp-oT-AoE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TQ8-No-t7I" secondAttribute="bottom" constant="8" symbolic="YES" id="Z0k-wH-fsM"/>
+                            <constraint firstItem="fQg-Ez-xbx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="204" id="gIx-KB-C6h"/>
+                            <constraint firstItem="TQ8-No-t7I" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mzg-te-MA5"/>
+                            <constraint firstItem="fQg-Ez-xbx" firstAttribute="trailing" secondItem="weW-mo-gQI" secondAttribute="trailing" id="z50-pA-tKi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="weW-mo-gQI"/>
+                                <exclude reference="fQg-Ez-xbx"/>
+                                <exclude reference="TQ8-No-t7I"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="10H-Iy-ivI"/>
+                                <exclude reference="5Wz-kN-g9h"/>
+                                <exclude reference="Ehu-Yz-aCg"/>
+                                <exclude reference="PYp-oT-AoE"/>
+                                <exclude reference="8II-tu-KH9"/>
+                                <exclude reference="gIx-KB-C6h"/>
+                                <exclude reference="z50-pA-tKi"/>
+                                <exclude reference="Z0k-wH-fsM"/>
+                                <exclude reference="mzg-te-MA5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="weW-mo-gQI"/>
+                                <include reference="fQg-Ez-xbx"/>
+                                <include reference="TQ8-No-t7I"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="10H-Iy-ivI"/>
+                                <include reference="5Wz-kN-g9h"/>
+                                <include reference="Ehu-Yz-aCg"/>
+                                <include reference="PYp-oT-AoE"/>
+                                <include reference="8II-tu-KH9"/>
+                                <include reference="gIx-KB-C6h"/>
+                                <include reference="z50-pA-tKi"/>
+                                <include reference="Z0k-wH-fsM"/>
+                                <include reference="mzg-te-MA5"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="changeButton" destination="TQ8-No-t7I" id="IKl-Ef-1uG"/>
+                        <outlet property="quoteLabel" destination="fQg-Ez-xbx" id="lv1-qI-QSZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpeg" width="1014" height="476"/>
+    </resources>
 </document>

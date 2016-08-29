@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *quoteLabel;
+@property (weak, nonatomic) IBOutlet UIButton *changeButton;
+@property (retain,nonatomic) NSArray *quotesArray;
+
+- (IBAction)changeAction:(id)sender;
 
 @end
 

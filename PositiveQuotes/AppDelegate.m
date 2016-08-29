@@ -13,10 +13,32 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize player;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
+    resourcePath = [resourcePath stringByAppendingString:@"/Marimba.mp3"];
+    NSLog(@"Path to play: %@", resourcePath);
+    NSError* err;
+    
+    //Initialize our player pointing to the path to our resource
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:
+              [NSURL fileURLWithPath:resourcePath] error:&err];
+    
+    if( err ){
+        //bail!
+        NSLog(@"Failed with reason: %@", [err localizedDescription]);
+    }
+    else{
+        //set our delegate and begin playback
+        player.delegate = self;
+        [player play];
+        player.numberOfLoops = -1;
+        player.currentTime = 0;
+        player.volume = 1.0;
+    }
     return YES;
 }
 
