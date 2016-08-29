@@ -33,7 +33,7 @@
                             @"I love you",
                             @"It'll be alright",
                             @"Don't worry",
-                            @"Zuzanna loves you",
+                            @"Your girlfriend loves you",
                             @"You are able to do it",
                             @"Nothing can stop you",
                             @"Just relax",
